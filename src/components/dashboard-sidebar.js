@@ -15,32 +15,59 @@ import { Users as UsersIcon } from '../icons/users';
 import { XCircle as XCircleIcon } from '../icons/x-circle';
 import { Logo } from './logo';
 import { NavItem } from './nav-item';
+import { News as NewsIcon } from '../icons/news';
+import { Transactions as TransactionsIcon } from '../icons/transactions';
+import { Categories as CategoriesIcon } from '../icons/categories';
+
 
 const items = [
   {
     href: '/',
     icon: (<ChartBarIcon fontSize="small" />),
-    title: 'Dashboard'
+    title: 'Ana səhifə'
   },
   {
-    href: '/customers',
+    href: '/categories',
+    icon: (<CategoriesIcon fontSize="small" />),
+    title: 'Kateqoriyalar'
+  },
+
+  {
+    href: '/users',
     icon: (<UsersIcon fontSize="small" />),
-    title: 'Customers'
+    title: 'İstifadəçilər'
   },
   {
-    href: '/products',
-    icon: (<ShoppingBagIcon fontSize="small" />),
-    title: 'Products'
-  },
-  {
-    href: '/account',
-    icon: (<UserIcon fontSize="small" />),
-    title: 'Account'
+    href: '/news',
+    icon: (<NewsIcon fontSize="small" />),
+    title: 'Xəbərlər'
   },
   {
     href: '/settings',
     icon: (<CogIcon fontSize="small" />),
-    title: 'Settings'
+    title: 'Tənzimləmələr'
+  },
+  {
+    href: '/user_iddia',
+    icon: (<UserAddIcon fontSize="small" />),
+    title: 'İstifadəçi iddiaları'
+  },
+  {
+    href: '/transactions',
+    icon: (<TransactionsIcon fontSize="small" />),
+    title: 'Tranzaksiyalar'
+  },
+  {
+    href: '/packets',
+    icon: (<CogIcon fontSize="small" />),
+    title: 'Bonus paketler'
+  },
+
+/*
+  {
+    href: '/account',
+    icon: (<UserIcon fontSize="small" />),
+    title: 'Account'
   },
   {
     href: '/login',
@@ -56,7 +83,7 @@ const items = [
     href: '/404',
     icon: (<XCircleIcon fontSize="small" />),
     title: 'Error'
-  }
+  }*/
 ];
 
 export const DashboardSidebar = (props) => {
@@ -130,6 +157,7 @@ export const DashboardSidebar = (props) => {
                   color="neutral.400"
                   variant="body2"
                 >
+
                   Your tier
                   {' '}
                   : Premium
@@ -169,48 +197,12 @@ export const DashboardSidebar = (props) => {
           }}
         >
           <Typography
-            color="neutral.100"
-            variant="subtitle2"
-          >
-            Need more features?
-          </Typography>
-          <Typography
             color="neutral.500"
             variant="body2"
           >
-            Check out our Pro solution template.
+            Iddia.az 2022 - İdarəetmə sistemi
           </Typography>
-          <Box
-            sx={{
-              display: 'flex',
-              mt: 2,
-              mx: 'auto',
-              width: '160px',
-              '& img': {
-                width: '100%'
-              }
-            }}
-          >
-            <img
-              alt="Go to pro"
-              src="/static/images/sidebar_pro.png"
-            />
-          </Box>
-          <NextLink
-            href="https://material-kit-pro-react.devias.io/"
-            passHref
-          >
-            <Button
-              color="secondary"
-              component="a"
-              endIcon={(<OpenInNewIcon />)}
-              fullWidth
-              sx={{ mt: 2 }}
-              variant="contained"
-            >
-              Pro Live Preview
-            </Button>
-          </NextLink>
+
         </Box>
       </Box>
     </>
